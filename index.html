@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ULTRA TEAM+ | Loja Digital</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <canvas id="particles"></canvas>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo-ultra.png" alt="Logo ULTRA TEAM+" />
+      <span>ULTRA TEAM+</span>
+    </div>
+    <nav>
+      <a href="#catalogos">Catálogos</a>
+      <a href="#logos">Logos</a>
+      <a href="#pix">Pix</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="logo-orbit">
+        <span></span><span></span><span></span>
+        <img class="hero-logo" src="assets/logo-ultra.png" alt="Logo ULTRA TEAM+" />
+      </div>
+      <span class="badge">ULTRA TEAM+ • roxo neon • visual premium</span>
+      <h1>Catálogos digitais para plataformas escolares</h1>
+      <p>Escolha a plataforma, veja o valor e finalize pelo Pix. Tudo separado, moderno e com identidade visual da ULTRA.</p>
+      <a class="primary-btn" href="#catalogos">Ver catálogos</a>
+    </section>
+
+    <section id="logos" class="logo-strip section-small">
+      <h2>Plataformas no site</h2>
+      <div class="strip">
+        <img src="assets/logo-ultra.png" alt="ULTRA TEAM+" />
+        <img src="assets/logo-alura.png" alt="Alura" />
+        <img src="assets/logo-khan.png" alt="Khan Academy" />
+        <img src="assets/logo-sala-futuro.png" alt="Sala do Futuro" />
+        <img src="assets/logo-redacao.png" alt="Redação Online" />
+        <img src="assets/logo-extra.png" alt="Logo enviada" />
+      </div>
+    </section>
+
+    <section id="catalogos" class="section">
+      <div class="section-title">
+        <h2>Catálogos separados</h2>
+        <p>Todos os packs com valor máximo de R$ 40,00.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card espanha">
+          <div class="flag-logo">🇪🇸</div>
+          <h3>Pack Espanha</h3>
+          <p>Pack personalizado com tema Espanha, visual premium e organização por plataforma.</p>
+          <strong>R$ 40,00</strong>
+          <button onclick="openPayment('Pack Espanha', 'R$ 40,00')">Comprar</button>
+        </article>
+
+        <article class="card">
+          <img class="app-logo" src="assets/logo-alura.png" alt="Logo Alura" />
+          <h3>Alura</h3>
+          <p>Catálogo separado para plataforma Alura, com foco em progresso, rotina e desempenho.</p>
+          <strong>R$ 30,00</strong>
+          <button onclick="openPayment('Alura', 'R$ 30,00')">Comprar</button>
+        </article>
+
+        <article class="card">
+          <img class="app-logo" src="assets/logo-khan.png" alt="Logo Khan Academy" />
+          <h3>Khan Academy</h3>
+          <p>Catálogo separado para Khan Academy, com organização de conteúdos e evolução de nota.</p>
+          <strong>R$ 30,00</strong>
+          <button onclick="openPayment('Khan Academy', 'R$ 30,00')">Comprar</button>
+        </article>
+
+        <article class="card">
+          <img class="app-logo" src="assets/logo-sala-futuro.png" alt="Logo Sala do Futuro" />
+          <h3>Sala do Futuro</h3>
+          <p>Catálogo separado para Sala do Futuro, pendências, desempenho e acompanhamento visual.</p>
+          <strong>R$ 35,00</strong>
+          <button onclick="openPayment('Sala do Futuro', 'R$ 35,00')">Comprar</button>
+        </article>
+
+        <article class="card">
+          <img class="app-logo logo-dark" src="assets/logo-extra.png" alt="Logo extra enviada" />
+          <h3>Expansões</h3>
+          <p>Catálogo separado para expansões, com prazos, metas e organização por etapas.</p>
+          <strong>R$ 25,00</strong>
+          <button onclick="openPayment('Expansões', 'R$ 25,00')">Comprar</button>
+        </article>
+
+        <article class="card">
+          <img class="app-logo wide" src="assets/logo-redacao.png" alt="Logo Redação Online" />
+          <h3>Redações</h3>
+          <p>Catálogo separado para redações, revisão, estrutura e melhoria da escrita.</p>
+          <strong>R$ 40,00</strong>
+          <button onclick="openPayment('Redações', 'R$ 40,00')">Comprar</button>
+        </article>
+
+        <article class="card">
+          <div class="flag-logo">✅</div>
+          <h3>Prova Paulista</h3>
+          <p>Catálogo separado para preparação, revisão e foco em melhorar desempenho.</p>
+          <strong>R$ 35,00</strong>
+          <button onclick="openPayment('Prova Paulista', 'R$ 35,00')">Comprar</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="info-box">
+      <h2>Como funciona</h2>
+      <p>Escolha o catálogo, clique em comprar, copie a chave Pix e envie o comprovante para atendimento.</p>
+    </section>
+
+    <section id="pix" class="pix-section">
+      <h2>Pagamento Pix</h2>
+      <p>Chave Pix oficial da loja:</p>
+      <div class="pix-key">11970160550</div>
+      <button class="primary-btn" onclick="copyPix()">Copiar chave Pix</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ULTRA TEAM+ — Todos os direitos reservados.</p>
+  </footer>
+
+  <div class="modal" id="paymentModal">
+    <div class="modal-content">
+      <img src="assets/logo-ultra.png" alt="Logo ULTRA" />
+      <h2>Comprar agora</h2>
+      <p id="selectedProduct"></p>
+      <p>Copie a chave Pix abaixo pelo celular.</p>
+      <div class="pix-key">11970160550</div>
+      <button onclick="copyPix()">Copiar Pix</button>
+      <button class="secondary" onclick="closePayment()">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
